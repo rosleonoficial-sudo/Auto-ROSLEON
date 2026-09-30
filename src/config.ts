@@ -4,7 +4,7 @@
  * Insira o link de convite do seu grupo do WhatsApp abaixo.
  * Exemplo: "https://chat.whatsapp.com/Gabc12345Def6789"
  */
-export const WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/SEU-LINK-DO-GRUPO-AQUI";
+export const WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/IXTXXeRz2DP1b3ffkFQpKr?s=cl&p=a&ilr=4&iam=0";
 
 /**
  * VÍDEO DO YOUTUBE
@@ -16,6 +16,13 @@ export const WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/SEU-LINK-DO-GRUPO-A
  * - https://www.youtube.com/shorts/ID
  */
 export const YOUTUBE_VIDEO_URL = "https://youtube.com/shorts/yKHrUfcMD_o";
+
+/**
+ * ARQUIVO DE VÍDEO PRÓPRIO (HTML5)
+ * Para rodar 100% sem links ou marca do YouTube, coloque o arquivo .mp4 em public/
+ * e preencha o caminho abaixo (ex: "/video.mp4"). Se vazio, utiliza a incorporação padrão.
+ */
+export const LOCAL_VIDEO_URL = "";
 
 /**
  * Produtos da Vitrine ("ALGUNS PRODUTOS QUE JÁ PASSARAM PELO GRUPO")

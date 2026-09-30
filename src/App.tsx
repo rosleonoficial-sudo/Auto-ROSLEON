@@ -17,11 +17,15 @@ import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
 import { LinkNoticeModal } from './components/LinkNoticeModal';
 import { WHATSAPP_GROUP_URL } from './config';
+import { trackLeadEvent } from './utils/pixel';
 
 export default function App() {
   const [isNoticeOpen, setIsNoticeOpen] = useState(false);
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    // 4. Dispara o evento padrão Lead de forma centralizada e resiliente
+    trackLeadEvent();
+
     // Se o usuário ainda não substituiu o link de exemplo, exibe o aviso explicativo
     if (WHATSAPP_GROUP_URL.includes("SEU-LINK-DO-GRUPO-AQUI")) {
       e.preventDefault();
