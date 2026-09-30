@@ -1,0 +1,6 @@
+{
+  "name": "Rosleon Ofertas Automotivas",
+  "description": "Landing page de captura para o Grupo VIP de Ofertas Automotivas do Rosleon. Economize até 70% em produtos para o seu carro.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

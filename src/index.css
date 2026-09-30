@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-color: #050505;
+    color: #ffffff;
+  }
+}
+
+.font-heading {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* 3D Gold/Orange 70% effect matching the reference */
+.text-70-percent {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  background: linear-gradient(180deg, #FFE873 0%, #FFA800 45%, #E65C00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0px 4px 10px rgba(230, 92, 0, 0.45));
+}
+
+/* Animação de pulsação suave em escala (até 3%) e sombra amarela expansiva (2.5s) */
+@keyframes pulse-yellow-glow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35), 0 0 0 0 rgba(255, 212, 0, 0.65);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.45), 0 0 28px 7px rgba(255, 212, 0, 0.85);
+  }
+}
+
+/* Faixa de brilho atravessando o botão a cada 4 segundos */
+@keyframes shine-sweep {
+  0% {
+    left: -130%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.65;
+  }
+  35% {
+    left: 140%;
+    opacity: 0.65;
+  }
+  36%, 100% {
+    left: 140%;
+    opacity: 0;
+  }
+}
+
+/* Seta animada suavemente para a direita a cada 1.6 segundos */
+@keyframes arrow-nudge {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+.animate-arrow-nudge {
+  animation: arrow-nudge 1.6s ease-in-out infinite;
+}
+
+/* Botão Amarelo Vibrante (#FFD400) com contraste preto e efeitos automáticos */
+.btn-yellow-cta {
+  position: relative;
+  overflow: hidden;
+  background-color: #FFD400;
+  color: #000000;
+  height: 52px;
+  min-height: 48px;
+  max-height: 56px;
+  animation: pulse-yellow-glow 2.5s ease-in-out infinite;
+  transition: filter 0.18s ease, transform 0.12s ease;
+  will-change: transform, box-shadow;
+}
+
+.btn-yellow-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -130%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    105deg,
+    transparent 15%,
+    rgba(255, 255, 255, 0.65) 50%,
+    transparent 85%
+  );
+  transform: skewX(-20deg);
+  animation: shine-sweep 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.btn-yellow-cta:hover {
+  filter: brightness(1.06);
+}
+
+.btn-yellow-cta:active {
+  transform: scale(0.97) !important;
+  filter: brightness(0.94);
+}
+
+/* Respeito à preferência de movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  .btn-yellow-cta,
+  .btn-yellow-cta::before,
+  .animate-arrow-nudge {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* Subtle glow */
+.orange-glow {
+  box-shadow: 0 0 40px rgba(249, 115, 22, 0.2);
+}
