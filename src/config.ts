@@ -4,7 +4,7 @@
  * Insira o link de convite do seu grupo do WhatsApp abaixo.
  * Exemplo: "https://chat.whatsapp.com/Gabc12345Def6789"
  */
-export const WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/IXTXXeRz2DP1b3ffkFQpKr?s=cl&p=a&ilr=4&iam=0";
+export const WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/JR2u2DVpN0a70YxHIgpaX7?s=cl&p=a&mlu=4&ilr=4&iam=2";
 
 /**
  * VÍDEO DO YOUTUBE
